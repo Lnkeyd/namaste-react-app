@@ -1,0 +1,26 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.contact {
+    margin-top: 17px;
+    padding: 33px 35px;
+    &__for-messages {
+        position: relative;
+        &__bg {
+            position: absolute;
+            left: -35px;
+            z-index: -1;
+            width: calc(100vw);
+            height: calc(100vh - 258px);
+            background-color: colors.$container-main-color;
+            background-size: cover
+        }
+        &__header {
+            @include fonts.mobileHeader;
+        }
+        &__form {
+            z-index: 2;
+            padding: 58px 0px;
+        }
+    }
+}

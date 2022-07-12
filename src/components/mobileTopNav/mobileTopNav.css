@@ -1,0 +1,26 @@
+.mobileTopNav {
+  height: 1.875em;
+  padding-right: 2.1875em;
+  display: flex;
+  justify-content: space-between;
+}
+.mobileTopNav__logo {
+  width: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #AD1818;
+  color: #FFF;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.mobileTopNav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+/*# sourceMappingURL=mobileTopNav.css.map */

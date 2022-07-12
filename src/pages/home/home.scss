@@ -1,0 +1,78 @@
+@use '../../styles/colors';
+
+.home {
+    padding: 2.9375em 2.1875em 0px 2.1875em;
+    &__header {
+        font-weight: 400;
+        font-size: 2.25rem;
+        max-width: 5.944em;
+    }
+    &__img {
+        background-image: url("../../../public/img/Main_Image_final.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 190px;
+        right: 0px;
+        height: 289px;
+        width: 300px;
+    }
+    &__descr {
+        margin-top: 306px;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: right;
+        max-width: 270px;
+    }
+    &__form {
+        margin-top: 24px;
+        // height: 85px;
+        background-color: colors.$container-addition-color;
+        border: 1px solid colors.$text-black-color;
+        color: colors.$text-black-color;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        padding: 23px 28px;
+        &__btn {
+            margin-right: 0;
+            margin-left: auto;
+            margin-top: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 96px;
+            height: 28px;
+            background-color: colors.$item-additional-color;
+            color: colors.$text-white-color;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    &__palette {
+        margin-top: 30px;
+        margin-right: 0;
+        margin-left: auto;
+        width: 120px;
+        height: 30px;
+        display: flex;
+        margin-bottom: 34px;
+        &__item {
+            width: 30px;
+            height: 30px;
+            &#color_1 {
+                background-color: colors.$container-addition-color;
+            }
+            &#color_2 {
+                background-color: colors.$container-main-color;
+            }
+            &#color_3 {
+                background-color: colors.$item-strong-color;
+            }
+            &#color_4 {
+                background-color: colors.$item-accent-color;
+            }
+        }
+    }
+}

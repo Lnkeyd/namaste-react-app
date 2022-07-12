@@ -1,0 +1,28 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.faq {
+    margin-top: 17px;
+    background-color: colors.$container-main-color;
+    padding: 33px 35px;
+    &__header {
+        @include fonts.mobileHeader;
+        margin-bottom: 36px;
+    }
+    &__questions {
+        background-color: colors.$container-addition-color;
+        color: colors.$text-black-color;
+        border: 1px solid colors.$text-black-color;
+    }
+    &__img {
+        margin-top: 62px;
+        background-color: colors.$item-smooth-color;
+        width: 100%;
+        min-height: 252px;
+        height: 72vw;
+        background-image: url("../../../public/img/questions.svg");
+        background-size: 100%;
+        background-repeat:   no-repeat;
+        background-position: center center;
+    }
+}
