@@ -1,0 +1,35 @@
+@use '../../styles/colors';
+
+.wrapper {
+    position: relative;
+}
+
+.input {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-color: colors.$container-addition-color;
+    padding: 15px;
+    border: 1px solid colors.$text-black-color;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inconsolata';
+}
+
+input:focus{
+    outline: 1px solid colors.$text-black-color;
+}
+
+.smile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: colors.$item-strong-color;
+    border: 1px solid colors.$text-black-color;
+    color: colors.$text-white-color;
+}

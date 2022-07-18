@@ -1,8 +1,7 @@
 .mobileBottomNav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 3.1875em;
   background-color: #476367;
   display: flex;

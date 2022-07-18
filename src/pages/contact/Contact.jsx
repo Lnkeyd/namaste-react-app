@@ -3,6 +3,7 @@ import MobileTopNav from '../../components/mobileTopNav/MobileTopNav'
 import MobileBottomNav from '../../components/mobileBottomNav/MobileBottomNav'
 import './contact.css'
 import data from './data.js'
+import Input from '../../components/input/Input'
 
 const Contact = () => {
   return (
@@ -16,12 +17,26 @@ const Contact = () => {
             </div>
             <div className="contact__for-messages__bg"></div>
             <form action="" className="contact__for-messages__form">
-                <p>asdfasdfasdf</p>
-                <input type="text" className="contact__for-messages__form__email" />
-                <input type="text" className="contact__for-messages__form__subject" />
-                <textarea name="" id="" cols="30" rows="10" className="contact__form__message"></textarea>
-                <div className="contact__for-messages__form__descr"></div>
-                <button className="contact__for-messages__form__button">
+                <Input 
+                    type='email' 
+                    placeholder='Your email'
+                    showSmiles={false}
+                    className="contact__for-messages__form__email"
+                />
+                <Input 
+                    type='text' 
+                    placeholder='Subject'
+                    showSmiles={false}
+                    className="contact__for-messages__form__subject"
+                />
+                <textarea 
+                    name="" 
+                    className="contact__for-messages__form__message"
+                    placeholder='Message'></textarea>
+                <div className="contact__for-messages__form__descr">
+                    *We do not share your data with 3rd persons
+                </div>
+                <button type='button' className="contact__for-messages__form__button">
                     Send
                 </button>
             </form>

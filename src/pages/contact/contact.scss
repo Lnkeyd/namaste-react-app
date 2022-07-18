@@ -1,9 +1,11 @@
 @use '../../styles/colors';
 @use '../../styles/fonts';
+@use '../../styles/components';
 
 .contact {
     margin-top: 17px;
     padding: 33px 35px;
+    overflow: hidden;
     &__for-messages {
         position: relative;
         &__bg {
@@ -11,9 +13,8 @@
             left: -35px;
             z-index: -1;
             width: calc(100vw);
-            height: calc(100vh - 258px);
+            height: calc(100% - 66px);
             background-color: colors.$container-main-color;
-            background-size: cover
         }
         &__header {
             @include fonts.mobileHeader;
@@ -21,6 +22,40 @@
         &__form {
             z-index: 2;
             padding: 58px 0px;
+            .input{
+                margin-bottom: 24px;
+            }
+            &__descr {
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 24px;
+            }
+            &__message {
+                resize: none;
+                display: inline-block;
+                height: 112px;
+                width: 100%;
+                background-color: colors.$container-addition-color;
+                padding: 15px;
+                border: 1px solid colors.$text-black-color;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: 'Inconsolata';
+                margin-bottom: 24px;
+                &:focus {
+                    outline: 1px solid colors.$text-black-color;
+                }
+            }
+            button: {
+                border:none;
+            }
+            &__button{
+                @include components.mobileButton;
+                border: none;
+                background-color: colors.$item-strong-color;
+                margin-right: 0;
+                margin-left: auto;            
+            }
         }
     }
 }

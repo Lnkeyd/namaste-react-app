@@ -1,9 +1,9 @@
 @use '../../styles/colors';
 
 .mobileBottomNav {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 3.1875em;
     background-color: colors.$item-strong-color;
     display: flex;
