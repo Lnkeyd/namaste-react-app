@@ -48,22 +48,24 @@ const Contact = () => {
             </div>
             <ul className="contact__addresses__list">
                 <li className="contact__addresses__list__element">
-                    <div className="img"></div>
-                    <div className="contact__addresses__list__text"></div>
+                    <i className="fa-solid fa-location-dot fa-lg"></i>
+                    <div className="contact__addresses__list__element__text">1257 Lunetta Street, TX 706301</div>
                 </li>
                 <li className="contact__addresses__list__element">
-                    <div className="img"></div>
-                    <div className="contact__addresses__list__text"></div>
+                    <i className="fa-solid fa-phone fa-lg"></i>
+                    <div className="contact__addresses__list__element__text">+1 (401) 576-48-21</div>
                 </li>
                 <li className="contact__addresses__list__element">
-                    <div className="img"></div>
-                    <div className="contact__addresses__list__text"></div>
+                    <i className="fa-solid fa-envelope fa-lg"></i>
+                    <div className="contact__addresses__list__element__text">info@namastefordev.com</div>
                 </li>
             </ul>
             <div className="contact__addresses__comment">
-                <div className="quotermark">"</div>
-                <div className="contact__addresses__comment__text">I’ve only used that Contact page to tell devs that they’re awesome!</div>
-                <div className="contact__addresses__comment__email">mtthew@gmail.com</div>
+                <i className="fa-solid fa-quote-right fa-lg quotermark"></i>
+                <div className="contact__addresses__comment__wrap">
+                    <div className="contact__addresses__comment__wrap__text">I’ve only used that Contact page to tell devs that they’re awesome!</div>
+                    <div className="contact__addresses__comment__wrap__email">mtthew@gmail.com</div>
+                </div>
             </div>
         </div>
       </div>
