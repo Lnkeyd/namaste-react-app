@@ -9,6 +9,7 @@ h3 {
     padding: 27px 22px;
     height: fit-content;
     border: 1px solid colors.$text-black-color;
+    cursor: pointer;
     &__wrap {
         height: 16px;
         display: flex;

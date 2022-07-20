@@ -1,0 +1,52 @@
+@use '../../styles/colors';
+@use '../../styles/components';
+
+.task {
+    padding: 26px 22px;
+    background-color: colors.$item-smooth-color;
+    margin-bottom: 40px;
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 18px;
+        &__marker {
+            height: 8px;
+            width: 8px;
+            background-color: colors.$item-strong-color;
+            margin-right: 9px;
+        }
+        &__text {
+            font-size: 12px;
+            font-weight: 600;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 13px;
+            height: 2px;
+            width: 100%;
+            background-color: colors.$item-additional-color;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        &__done {
+            @include components.mobileButton;
+            width: 30px;
+            height: 30px;
+            border: none;
+            box-shadow: none;
+            background-color: colors.$item-strong-color;
+            margin-right: 10px;
+        }
+        &__delete {
+            @include components.mobileButton;
+            width: 30px;
+            height: 30px;
+            border: none;
+            box-shadow: none;
+            background-color: colors.$item-accent-color;
+        }
+    }
+}

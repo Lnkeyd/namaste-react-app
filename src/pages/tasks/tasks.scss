@@ -14,6 +14,7 @@
         left: 0;
         z-index: -1;
         background-color: colors.$container-main-color;
+        background-size: cover;
         width: 100%;
         height: calc(100vh - 88px);
     }
@@ -32,7 +33,7 @@
             margin-bottom: 44px;
             &__info {
                 @include components.mobileButton;
-                background-color: colors.$item-strong-color;
+                background-color: colors.$item-additional-color;
                 border: none;
                 box-shadow: none;
                 width: 27px;

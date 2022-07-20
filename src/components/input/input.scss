@@ -2,6 +2,12 @@
 
 .wrapper {
     position: relative;
+    > aside {
+        position: absolute;
+        top: 40px;
+        z-index: 1;
+        width: 100%;
+    }
 }
 
 .input {
@@ -32,4 +38,5 @@ input:focus{
     background-color: colors.$item-strong-color;
     border: 1px solid colors.$text-black-color;
     color: colors.$text-white-color;
+    cursor: pointer;
 }

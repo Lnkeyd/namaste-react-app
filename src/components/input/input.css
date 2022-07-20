@@ -1,6 +1,12 @@
 .wrapper {
   position: relative;
 }
+.wrapper > aside {
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  width: 100%;
+}
 
 .input {
   display: inline-block;
@@ -30,5 +36,6 @@ input:focus {
   background-color: #476367;
   border: 1px solid #1B1C1C;
   color: #FFF;
+  cursor: pointer;
 }
 /*# sourceMappingURL=input.css.map */

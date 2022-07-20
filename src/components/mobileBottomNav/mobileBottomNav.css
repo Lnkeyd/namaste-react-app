@@ -1,5 +1,6 @@
 .mobileBottomNav {
   position: fixed;
+  z-index: 99;
   bottom: 0;
   width: 100vw;
   height: 3.1875em;

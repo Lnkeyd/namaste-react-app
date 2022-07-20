@@ -1,25 +1,35 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext } from 'react'
+import { Context } from '../../context';
 import Picker from 'emoji-picker-react';
 import './input.css'
+import { useEffect } from 'react';
 
 function Input({type, placeholder, showSmiles}) {
 
+    const {handleInput, setIsTaskAdded, isTaskAdded} = useContext(Context)
     const searchInput = useRef(null)
-    const [chosenEmoji, setChosenEmoji] = useState(null);
-    const [inputStr, setInputStr] = useState('');
-    const [showEmoji, setShowEmoji] = useState(false);
+    const [chosenEmoji, setChosenEmoji] = useState(null)
+    const [inputStr, setInputStr] = useState('')
+    const [showEmoji, setShowEmoji] = useState(false)
 
     const onEmojiClick = (event, emojiObject) => {
         setInputStr(prevInput => prevInput + emojiObject.emoji)
-        setChosenEmoji(emojiObject);
-        handleFocus();
+        setChosenEmoji(emojiObject)
+        handleFocus()
     };
-
 
   function handleFocus(){
     searchInput.current.focus()
   }
+
+  useEffect(() => {
+    if (isTaskAdded) {
+        setInputStr('')
+        setIsTaskAdded(false)
+    }
+    handleInput(inputStr)
+    }, [inputStr, isTaskAdded])
 
 
   return (

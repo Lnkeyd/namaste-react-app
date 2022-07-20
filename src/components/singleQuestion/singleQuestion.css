@@ -9,6 +9,7 @@ h3 {
   height: -moz-fit-content;
   height: fit-content;
   border: 1px solid #1B1C1C;
+  cursor: pointer;
 }
 .singleQuestion__wrap {
   height: 16px;
