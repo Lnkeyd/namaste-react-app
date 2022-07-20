@@ -18,7 +18,7 @@ const MobileBottomNav = () => {
           </div>
           <div className="mobileBottomNav__wrapper__item__title">Habits</div>
         </Link>
-        <Link to='/habits' className="mobileBottomNav__wrapper__item">
+        <Link to='/tasks' className="mobileBottomNav__wrapper__item">
         <div className="mobileBottomNav__wrapper__item__icon">
             <i className="fa-solid fa-list-check fa-lg"></i>
           </div>

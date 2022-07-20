@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Contact from './pages/contact/Contact';
 import Faq from './pages/faq/Faq';
 import Home from './pages/home/Home';
+import Tasks from './pages/tasks/Tasks';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route exact path='/' element={ <Home/> } />
         <Route exact path='/faq' element={ <Faq/> } />
         <Route exact path='/contact' element={ <Contact/> } />
+        <Route exact path='/tasks' element={ <Tasks/> } />
       </Routes>
     </BrowserRouter>
   );
