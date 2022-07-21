@@ -1,7 +1,7 @@
 import React from 'react'
 import './task.css'
 import { useContext } from 'react'
-import { Context } from '../../context'
+import { Context } from '../../Context'
 
 const Task = ({id, name}) => {
 

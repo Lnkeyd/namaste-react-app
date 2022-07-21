@@ -1,21 +1,22 @@
 .tasks {
   margin-top: 17px;
   padding: 33px 35px;
+  position: relative;
+}
+.tasks::after {
+  content: "";
+  position: absolute;
+  top: 103px;
+  left: 0;
+  background: linear-gradient(to left, #CAE8ED, #CAE8ED);
+  width: 100vw;
+  height: calc(100% - 66px);
+  z-index: -1;
 }
 .tasks__header {
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 24px;
-}
-.tasks__bg {
-  position: absolute;
-  top: 133px;
-  left: 0;
-  z-index: -1;
-  background-color: #CAE8ED;
-  background-size: cover;
-  width: 100%;
-  height: calc(100vh - 88px);
 }
 .tasks__form__header {
   margin-top: 72px;
@@ -69,7 +70,6 @@
   outline: 1px solid #1B1C1C;
 }
 .tasks__remove-all {
-  margin-bottom: 38px;
   display: flex;
   justify-content: space-between;
 }
@@ -97,4 +97,3 @@
 .tasks__remove-all__btn:focus {
   outline: 1px solid #1B1C1C;
 }
-/*# sourceMappingURL=tasks.css.map */

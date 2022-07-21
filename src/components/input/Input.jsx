@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useRef, useContext } from 'react'
-import { Context } from '../../context';
+import { Context } from '../../Context';
 import Picker from 'emoji-picker-react';
 import './input.css'
 import { useEffect } from 'react';
@@ -28,7 +28,7 @@ function Input({type, placeholder, showSmiles}) {
         setInputStr('')
         setIsTaskAdded(false)
     }
-    handleInput(inputStr)
+      handleInput(inputStr)
     }, [inputStr, isTaskAdded])
 
 

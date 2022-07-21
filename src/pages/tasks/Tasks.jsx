@@ -1,54 +1,20 @@
 import React from 'react'
-import { useState, useEffect, useContext, useRef } from 'react'
+import { useState } from 'react'
 import MobileBottomNav from '../../components/mobileBottomNav/MobileBottomNav'
 import MobileTopNav from '../../components/mobileTopNav/MobileTopNav'
 import Input from '../../components/input/Input'
 import Task from '../../components/task/Task'
 import './tasks.css'
 import data from './data'
-import { Context } from '../../context'
+import { Context } from '../../Context'
+import { useContext } from 'react'
 
 const Tasks = () => {
-    
-    const ref = useRef(null)
-    const [isTaskAdded, setIsTaskAdded] = useState(false)
-    const [input, setInput] = useState('')
-    const [tasks, setTasks] = useState(data)
 
-    function handleInput (newInput) {
-        setInput(newInput)
-    }
-
-    function addTask(e) {
-        e.preventDefault()
-        const newItem = {
-            id: Math.random() * 99,
-            name: input
-        }
-        console.log(newItem)
-        input && setTasks ([...tasks, newItem])
-        setIsTaskAdded(true)
-        console.log(isTaskAdded)
-    }
-
-    function completeTask() {
-        
-    }
-
-    function deleteTask(id) {
-        const newTasks = tasks.filter(item => item.id != id)
-        setTasks(newTasks)
-    }
-
-    function removeAllTasks(e) {
-        e.preventDefault()
-        setTasks([])
-    }
+    const {handleInput, addTask, tasks, removeAllTasks} = useContext(Context)
 
   return (
-    <Context.Provider value={
-        {handleInput, deleteTask, isTaskAdded, setIsTaskAdded}
-    }>
+    <>
         <MobileTopNav/>
 
         <div className="tasks">
@@ -91,7 +57,7 @@ const Tasks = () => {
         </div>
 
         <MobileBottomNav/>
-    </Context.Provider>
+    </>
   )
 }
 

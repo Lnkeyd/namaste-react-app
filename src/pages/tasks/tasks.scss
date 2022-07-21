@@ -5,18 +5,20 @@
 .tasks {
     margin-top: 17px;
     padding: 33px 35px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 103px;
+        left: 0;
+        background: linear-gradient(to left, colors.$container-main-color, colors.$container-main-color);
+        width: 100vw;
+        height: calc(100% - 66px);
+        z-index: -1;
+    }
     &__header {
         @include fonts.mobileHeader;
-    }
-    &__bg {
-        position: absolute;
-        top: 133px;
-        left: 0;
-        z-index: -1;
-        background-color: colors.$container-main-color;
-        background-size: cover;
-        width: 100%;
-        height: calc(100vh - 88px);
     }
     &__form {
         &__header {
@@ -46,7 +48,6 @@
         }
     }
     &__remove-all {
-        margin-bottom: 38px;
         display: flex;
         justify-content: space-between;
         &__text {
